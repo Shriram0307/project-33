@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+ 
+}
+ body{
+    background-image:url(/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    text-align:center;
+    align-content:center;
+ }
+h2{
+    text-align:center;
+}
+table{
+  align-content:center;
+    border-collapse: collapse;
+    width: 50%;
+    padding: 20px;        
+}
+
+</style>
+<body>
+
+<h2> User Registration display</h2>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Password</th>
+    <th>About</th>
+    <th>Language</th>
+    <th>Zipcode</th>
+    <th>Gender</th>
+    <th>Email</th>
+    <th>Mobile</th>
+  </tr>
+  @foreach($ud as $userdet)
+  <tr>
+
+    <td>{{$userdet->id}}</td>
+    <td>{{$userdet->name}}</td>
+    <td>{{$userdet->password}}</td>
+    
+    <td>{{$userdet->about}}</td>
+    <td>{{$userdet->language}}</td>
+    <td>{{$userdet->zipcode}}</td>
+    <td>{{$userdet->gender}}</td>
+    <td>{{$userdet->email}}</td>
+    <td>{{$userdet->mobile}}</td>
+    
+   
+  
+  </tr>
+  @endforeach
+</table>
+
+</body>
+</html>
+
