@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="registration_form33.html">
+    <style>
+  body{
+        font-family:arial,sans-serif;
+        background-image:url('/images/shri img33.jpg');
+        background-repeat:no-repeat;
+        background-size:cover;
+        margin: 0;
+        padding: 0;
+   }
+   h1{
+    text-align:center;
+    color:white;
+   }   
+   form{
+    background-color:white;
+        width:300px;
+    margin:20px auto;
+    padding:30px;
+    border-radius:50px;
+    box-shadow:0 0 10px rgba(0,0,0,0,1);
+   }
+
+   table{
+    width:500;
+   }
+      
+   table td{
+    padding 10px;
+   }
+   input[type="text"]{
+    width:100;
+    padding:0px;
+    border:1px solid #ccc;
+    border-radius:4px;
+   }
+
+   input[type="submit"]{
+    background-color:#007bff;
+    color:#fff;
+    padding:10px 20px;
+    border-radius:4px;
+    cursor:pointer;
+   }
+
+   input[type="submit"]:haver{
+    background-color:#0056b3;
+   }
+            </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="/create" method="post">
+            @csrf
+            <label for="name">Name</label>
+            <input type="text" name="name" required><br><br><br>
+
+            <label for="password">Password</label>
+            <input type="text" name="password" required><br><br><br>
+
+            <label for="about">About</label>
+            <input type="text" name="about" required><br><br><br>
+
+            <label for="language">Language</label>
+            <select  type="text" name="language" required>
+      <option value="en">English</option>
+      <option value="ta">Tamil</option>
+      <option value="fr">french</option>
+      
+    </select>
+           <br><br><br>
+
+            <label for="zipcode">Zipcode</label>
+            <input type="text" name="zipcode" required><br><br><br>
+
+
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female<br><br><br>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" required><br><br><br>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" name="mobile" required><br><br><br>
+
+
+          
+                  
+            <input type="submit" name="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
